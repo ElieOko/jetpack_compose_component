@@ -1,8 +1,13 @@
 package com.example.jc_component.component.button
 
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -14,6 +19,7 @@ import androidx.compose.ui.unit.dp
 fun MButton(){
     MButtonStructure(
         click = {},
+        content = {}
     )
 }
 
@@ -25,7 +31,7 @@ fun MButtonStructure(
     backgroundColor :Color = Color.Black,
     enabled : Boolean = true,
     sizeBorder : Int = 12,
-
+    content: @Composable RowScope.() -> Unit
 ){
     Button(
         onClick = { click() },
@@ -38,6 +44,7 @@ fun MButtonStructure(
         )
     {
         Text(text = contentDesc)
+       Row(content = content)
     }
 }
 
@@ -46,6 +53,10 @@ fun MButtonStructure(
 fun PreviewMButton(){
     MButtonStructure(
         click = {},
+        content = {
+            Text(text = "Test")
+            Icon(imageVector = Icons.Default.Add, contentDescription = null)
+        }
     )
 //    Box(
 //        modifier = Modifier
