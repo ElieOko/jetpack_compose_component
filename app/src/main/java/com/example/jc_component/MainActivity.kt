@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.jc_component.component.button.MButton
 import com.example.jc_component.ui.theme.Jc_componentTheme
+import com.example.jc_component.ui.theme.WhiteOff
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +23,7 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                    color = WhiteOff
                 ) {
                     Column(
                         modifier = Modifier.fillMaxSize()
