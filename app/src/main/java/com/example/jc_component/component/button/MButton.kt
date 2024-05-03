@@ -54,7 +54,6 @@ fun PreviewMButton(){
     MButtonStructure(
         click = {},
         content = {
-            Text(text = "Test")
             Icon(imageVector = Icons.Default.Add, contentDescription = null)
         }
     )
