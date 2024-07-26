@@ -27,7 +27,7 @@ fun MButton(){
 fun MButtonStructure(
     modifier : Modifier = Modifier,
     contentDesc : String = "Connexion UI",
-    click : () -> Unit,
+    click :  () -> Unit,
     backgroundColor :Color = Color.Black,
     enabled : Boolean = true,
     sizeBorder : Int = 12,
